@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{%block title%}
+    <title>Favourite Books</title>
+{%endblock%}
+{%block content%}
+    <div>
+        <h1>MY FAVOURITE BOOKS <a href="/logout" class="btn btn-danger pull-right">LOGOUT</a></h1>
+    </div>
+    {%for a in data%}
+    <div class="col-lg-6 col-md-6 thumbnail">
+        <p class="lead text-center caption">{{a.bookName}}</p>
+        <img src="{{a.image}}">
+    </div>
+    {%endfor%}
+{%endblock%}

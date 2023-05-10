@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{%block title%}
+    <title>Reset Password</title>
+{%endblock%}
+{%block content%}
+  <p>Please Enter the registered mail id to reset the password</p>
+  <form method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="SEND MAIL">
+  </form>
+{%endblock%}

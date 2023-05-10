@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+{%block title%}
+    <title>Recommendations</title>
+{%endblock%}
+{%block content%}
+<h1>RECOMMENDED BOOKS</h1>
+<table width="100%" border="" class="table-responsive">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Book Name</th>
+        <th>Author</th>
+        <th>Price</th>
+        <th>Genre</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    {%for a in data%}
+    <tr>
+        <td>{{a.name}}</td>
+        <td>{{a.mail}}</td>
+        <td>{{a.bookname}}</td>
+        <td>{{a.author}}</td>
+        <td>{{a.price}}</td>
+        <td>{{a.genre}}</td>
+        <td><a href="{%url 'editrec' a.id %}" class="btn btn-link">Edit</a></td>
+        <td><a href="{%url 'deleterec' a.id %}" class="btn btn-link">Delete</a></td>
+    </tr>
+    {%endfor%}
+</table>
+
+{%endblock%}

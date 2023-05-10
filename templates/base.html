@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {%block title%}
+    <title>Welcome</title>
+    {%endblock%}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <style>
+        *{
+            font-size:20px;
+        }
+        a{
+            background-color:skyblue;
+            display:block;
+            color:black;
+            margin-top:10px;
+            padding:5px;
+        }
+        a:hover{
+            background-color:lightpink;
+            color:black;
+            text-decoration:none;
+        }
+        img{
+            max-width:100%;
+            min-height:300px;
+            max-height:300px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="col-lg-12 col-md-12 bg-success">
+            <h1>BOOKSTAGRAM</h1>
+        </div>
+    </div>
+    <!-- status-->
+    <div class="container-fluid">
+        <div class="col-lg-3 col-md-3">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/favBooks">Favourite Books</a>
+            <a href="/recform">Recommend a Book</a>
+            <a href="/signup">Join us</a>
+            <a href="/login">Login</a>
+            <a href="/myPage">MyPage</a>
+        </div>
+
+        <div class="col-lg-9 col-md-9 bg-danger">
+            {%block content%}
+            <h1>ABOUT MY PAGE</h1>
+            <p>Book reviews are frequently assigned at school. The purpose is to get the student
+                to read a literature piece, evaluate it, and draw conclusions in writing.
+                This can develop different skills which will be helpful in the future.
+                To help you out, we’ve created a step-by-step guide that you can use to
+                write amazing book reviews.
+            </p>
+            <p>Swami Vivekananda was an Indian Hindu monk, public speaker,
+                Vedanta philosopher and Yoga practitioner. He was the chief disciple
+                of Sri Ramakrishna Paramahamsa. He is best remembered as the founder
+                of the Ramakrishna Mission and the Ramakrishna Math.
+            </p>
+            <p>
+                Belly a.k.a Isabel’s life is all about her summer break.
+                She just loves that time of the year, because, for her,
+                it is the time for fun, family, and relaxation.
+                It is the time when memories, that will last her a lifetime,
+                are created. So, for her, everything best happens during those
+                blissful months from June to August.
+            </p>
+            <p>Whenever we are asked about our favourite cuisine,
+                we respond with a story in our heads relating to that food.
+                Food has long served as a source of sustenance for humans and
+                inspiration for some incredible works of art. So let me ask you a
+                question. Are you a foodie?
+            </p>
+            {%endblock%}
+        </div>
+    </div>
+</body>
+</html>

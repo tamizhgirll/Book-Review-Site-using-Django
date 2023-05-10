@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{%block title%}
+    <title>Admin View Favourite</title>
+{%endblock%}
+{%block content%}
+<h1>Favourite Books</h1>
+<div class="table-responsive">
+<table border="" width="100%">
+    <tr>
+        <th>Book Name</th>
+        <th>Image Path</th>
+    </tr>
+    {%for a in obj%}
+    <tr>
+        <td>{{a.bookName}}</td>
+        <td>{{a.image}}</td>
+        <td><a href="{% url 'updateFav' a.id%}" class="btn btn-link">Edit</a></td>
+        <td><a href="{%url 'delFav' a.id%}" class="btn btn-link">Delete</a></td>
+    </tr>
+    {%endfor%}
+</table>
+</div>
+{%endblock%}
